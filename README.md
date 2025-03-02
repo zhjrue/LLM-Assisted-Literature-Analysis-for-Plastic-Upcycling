@@ -11,9 +11,9 @@ python codes for "LLM-Assisted Literature Analysis for Plastic Upcycling"
 - Certain non-English literatures and specific fonts within English literatures may not be recognized through `pdf2txt.py`. (Such instances are exceedingly rare in this work and do not affect the final statistical patterns.)
 - For lengthy txt files that cannot be fed into LLM in one go, one can manually remove less important text (*e.g.*, Reference section) or split the file into two parts for sequential input to LLM.
 ## api_LLM.py
-- `api_LLM.py`定义了一些实用函数`txt_answers_output`、`json_infos_output`、`find_txts`，用于实现基本的文件读写等操作；定义了类`class_API`，通过调用阿里云旗下大语言模型的API获取有关文献分析的信息。
+- `api_LLM.py`定义了函数`txt_answers_output`、`json_infos_output`、`find_txts`，用于实现基本的文件读写等操作；还定义了类`class_API`，通过调用阿里云旗下大语言模型的API获取有关文献分析的信息。
 - 使用时，应将`api_LLM.py`文件放置于python的项目文件夹中，以方便对其进行导入。
-- `api_LLM.py` defines utility functions such as `txt_answers_output`, `json_infos_output`, and `find_txts` to handle basic file operations like reading and writing. It also defines the `class_API` class, which interfaces with the API of a large language model under Alibaba Cloud to retrieve information for literature analysis.
+- `api_LLM.py` defines functions such as `txt_answers_output`, `json_infos_output`, and `find_txts` to handle basic file operations like reading and writing. It also defines the `class_API` class, which interfaces with the API of LLMs from Alibaba Cloud to retrieve information for literature analysis.
 - One should place the `api_LLM.py` file within your Python project directory for direct import.
 ## cate_API_plus.py、reac_API_max.py、route_API_max.py、prod_API_max.py
 - 通过导入`api_LLM.py`中的函数与类调用指定大语言模型的API，对文献进行分析，并将分析结果写入日志。
