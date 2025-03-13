@@ -1,7 +1,7 @@
 # LLM-Assisted Literature Analysis for Plastic Upcycling
-提供“LLM-Assisted Literature Analysis for Plastic Upcycling”一文中使用到的`python`代码
+提供“LLM-Assisted Literature Analysis for Plastic Upcycling”一文中使用到的`python`代码（自2025年3月2日后不再更新）
 
-python codes for "LLM-Assisted Literature Analysis for Plastic Upcycling"
+python codes for "LLM-Assisted Literature Analysis for Plastic Upcycling" (no more update after 2nd, March, 2025)
 ***
 ## pdf2txt.py
 - `pdf2txt.py`借助`fitz`提取pdf文件中的文本并将其写入txt文件中，方便后续直接输入给大语言模型。
