@@ -17,6 +17,6 @@
 - One should place the `api_LLM.py` file within your Python project directory for direct import.
 ## cate_API_plus.py、reac_API_max.py、route_API_max.py、prod_API_max.py
 - 通过导入`api_LLM.py`中的函数与类调用指定大语言模型的API，对文献进行分析，并将分析结果写入日志。
-- 通过调整`class_API`中的`model_name`、`system_guidance`、`seed、temperature`参数以及`API_analysis`中的`analyzed_text`参数，用户可以在特定的场景下调用指定的大语言模型对自己感兴趣的问题进行分析。
+- 通过调整`class_API`中的`model_name`、`system_guidance`、`seed`、`temperature`参数以及`API_analysis`中的`analyzed_text`参数，用户可以在特定的场景下调用指定的大语言模型对自己感兴趣的问题进行分析。
 - These scripts import functions and classes from `api_LLM.py` to invoke the specified large language model's API for literature analysis and log the analysis results.
 - By adjusting parameters such as `model_name`, `system_guidance`, `seed`, `temperature` in `class_API`, and `analyzed_text` in `API_analysis`, users can tailor the LLMs' API calls to analyze specific questions of interest in particular scenarios.
