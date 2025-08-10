@@ -102,3 +102,6 @@ class class_API:
 api = class_API()
 api.API_print()
 '''
+if __name__ == "__main__":
+    api = class_API()
+    api.API_print()
