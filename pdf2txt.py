@@ -39,19 +39,21 @@ def list_files_in_directory(directory_path):
 def pdf2txt_write(fold_path, file_name, content):
     """将 content 写入 fold_path 下的 file_name 文件中"""
 
-    file_path = fold_path + "\\" + f"{file_name}.txt"
+    file_path = fold_path + "/" + f"{file_name}.txt"
 
     with open(file_path, 'a', encoding='utf-8') as f:
         f.write(content)
 
 
-data_path = "your_path"    # 默认文件夹位置（建议尽可能短，否则可能超出系统识别上限）
+data_path = "./data/"    # 默认文件夹位置（建议尽可能短，否则可能超出系统识别上限）
 
-pdf_fold = input("输入pdf文件在默认文件夹中的位置：")
-txt_fold = input("输入txt文件在默认文件夹中的位置：")
+# pdf_fold = input("输入pdf文件在默认文件夹中的位置：")
+# txt_fold = input("输入txt文件在默认文件夹中的位置：")
 print('\n')
+pdf_fold = "pdfs"
+txt_fold = "txts"
 
-files = list_files_in_directory(data_path + '\\' + pdf_fold)
+files = list_files_in_directory(data_path + '/' + pdf_fold)
 
 processing_time, processing_times = 0, 0    # 总处理时间，总处理次数
 
@@ -59,12 +61,12 @@ for file_name, extension in files:
 
     if extension == '.pdf' or extension == '.PDF':
 
-        pdf_file_path = data_path + '\\' + pdf_fold + "\\" + file_name + extension
+        pdf_file_path = data_path + '/' + pdf_fold + "/" + file_name + extension
 
         startTime = time.time()
 
         result = process_pdf(pdf_file_path)
-        pdf2txt_write(data_path + '\\' + txt_fold, file_name, result[1])
+        pdf2txt_write(data_path + '/' + txt_fold, file_name, result[1])
 
         one_time = time.time() - startTime
         processing_time += one_time
