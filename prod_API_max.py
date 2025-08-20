@@ -2,7 +2,7 @@ import sys, time
 from api_LLM import class_API, txt_answers_output, find_txts
 
 
-txt_fold = "your_path"    ##### 设置输入文件夹路径
+txt_fold = "data/txts/"    ##### 设置输入文件夹路径
 sleep_time = 4    ##### 设置延迟时间
 
 files = find_txts(txt_fold)
@@ -55,7 +55,7 @@ for file in files:
 
 log_date = input("日志创建日期（六位）：")
 output_path = "your_path"    ##### 设置输出文件路径
-log_fold_path = output_path + "\\" + log_date
+log_fold_path = output_path + "/" + log_date
 
 txt_answers_output(log_fold_path, answers)
 

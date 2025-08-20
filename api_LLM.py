@@ -8,7 +8,7 @@ def txt_answers_output(fold_path, contents):
     log_name = input("请输入txt日志名：")
 
     time_str = str(time.strftime('%Y%m%d%H%M%S', time.localtime()))
-    file_path = fold_path + '\\' + f'{log_name}' + f"log{time_str}.txt"
+    file_path = fold_path + '/' + f'{log_name}' + f"log{time_str}.txt"
 
     with open(file_path, 'a', encoding='utf-8') as f:
         for content in contents:
@@ -22,7 +22,7 @@ def json_infos_output(fold_path, datas):
     log_name = input("请输入json日志名：")
 
     time_str = str(time.strftime('%Y%m%d%H%M%S', time.localtime()))
-    file_path = fold_path + '\\' + f'{log_name}' + f"log{time_str}.json"
+    file_path = fold_path + '/' + f'{log_name}' + f"log{time_str}.json"
 
     with open(file_path, 'w', encoding='utf-8') as f:
         json.dump(datas, f, indent=4, ensure_ascii=False)
